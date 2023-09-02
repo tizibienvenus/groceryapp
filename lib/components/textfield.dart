@@ -15,6 +15,7 @@ class SearchBox extends StatelessWidget {
   //final ValueChanged onChanged;
   final String title;
   final TextEditingController? controler;
+  //final Key
 
   @override
   Widget build(BuildContext context) {
@@ -31,6 +32,8 @@ class SearchBox extends StatelessWidget {
           borderRadius: BorderRadius.circular(30),
         ),
         child: TextField(
+          maxLines: 1,
+          minLines: 1,
           //onChanged: onChanged,
           style: TextStyle(
               color: Colors.black.withOpacity(0.8),
