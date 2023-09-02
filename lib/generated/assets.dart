@@ -2,7 +2,8 @@
 class Assets {
   Assets._();
 
+  static const String iconsNotification = 'assets/icons/notification.svg';
   static const String imagesImg = 'assets/images/img.png';
-  static const String orange = 'assets/images/orange.png';
+  static const String imagesOrange = 'assets/images/orange.png';
 
 }

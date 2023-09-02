@@ -9,19 +9,24 @@ class HomeScreen extends StatelessWidget {
     return Scaffold(
       //left: false,
       //right: false,
+      appBar: buildAppBar(),
       body: SafeArea(
         bottom: false,
         //top: false,
         child: Container(
-          child: Center(
-            child: Text(
-                "Home Page",
-                style: GoogleFonts.nunito(
-                  fontSize: 35,
-                  fontWeight: FontWeight.bold,
-                  color: Colors.black.withOpacity(0.85),
-                )
-            ),
+          padding: EdgeInsets.symmetric(horizontal: 20, vertical: 30),
+          child: Row(
+            mainAxisAlignment: MainAxisAlignment.spaceBetween,
+            children: [
+              Text(
+                "Catégories",
+                  style: GoogleFonts.nunito(
+                    fontSize: 25,
+                    fontWeight: FontWeight.bold,
+                    color: Colors.black.withOpacity(0.85),
+                  )
+              )
+            ],
           ),
         ),
       ),
@@ -33,16 +38,39 @@ class HomeScreen extends StatelessWidget {
 
   AppBar buildAppBar() {
     return AppBar(
+      toolbarHeight: 65,
+        toolbarOpacity: 0,
+        shadowColor: kPrimaryColor,
       backgroundColor: kPrimaryColor,
-      elevation: 0,
-      centerTitle: false,
-      title: Text('Favorite\'s'),
-      actions: <Widget>[
-        IconButton(
-          icon: SvgPicture.asset("assets/icons/notification.svg"),
-          onPressed: () {},
+      title: Column(
+        mainAxisAlignment: MainAxisAlignment.start,
+        children: [
+          Text(
+            "Good Morning",
+              style: GoogleFonts.nunito(
+                fontSize: 25,
+                fontWeight: FontWeight.w200,
+                color: Colors.black.withOpacity(0.85),
+              )
+          ),
+          Text(
+              "All Flutter Team",
+            style: GoogleFonts.nunito(
+            fontSize: 23,
+            fontWeight: FontWeight.bold,
+            color: Colors.black.withOpacity(0.85),
+          )
+          )
+        ],
+      ),
+      actions: [
+        Row(
+          mainAxisAlignment: MainAxisAlignment.start,
+          children: [
+            Text("data")
+          ],
         ),
-      ],
+      ]
     );
   }
 }

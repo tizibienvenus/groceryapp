@@ -60,18 +60,19 @@ class _ButtomNavbarState extends State<Home>{
           ),
               label: 'Orders'
           ),
-          const BottomNavigationBarItem(icon: Icon(
-            Icons.mobile_friendly,
+          const BottomNavigationBarItem(
+            icon: Icon(
+                Icons.import_export_outlined,
+              ),
             //size: 25,
-          ),
               label: 'Category'
           ),
           BottomNavigationBarItem(
          icon:Stack(
                 children:[
-                  const Icon(
-                    Icons.shopping_cart_rounded,
-                    //size: 30,
+                    const Icon(
+                      Icons.shopping_cart_rounded,
+                      //size: 30,
                   ),
                   Positioned(
                     top: 0,

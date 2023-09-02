@@ -22,7 +22,7 @@ class DetailsProductsScreen extends StatelessWidget {
           child: Stack(
             //alignment: AlignmentDirectional.topEnd,
             children: [
-              Image.asset(Assets.orange),
+              Image.asset(Assets.imagesOrange),
               Positioned(
                 top: 320,
                 child: Container(
