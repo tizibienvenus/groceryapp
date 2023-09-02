@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:groceryapp/screens/details/details_product.dart';
 import 'package:groceryapp/screens/homoscreen/components/nav_bar.dart';
 import 'package:groceryapp/screens/homoscreen/homescreen.dart';
 import 'package:groceryapp/screens/sign_in/signin.dart';
@@ -24,7 +25,7 @@ class MyApp extends StatelessWidget {
         hintColor: kBackgroundColor,
         visualDensity: VisualDensity.adaptivePlatformDensity,
       ),
-      home: Home(),
+      home: SignInScreen(),
     );
   }
 }
