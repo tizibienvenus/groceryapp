@@ -4,10 +4,16 @@ Grocery App est une application mobile des produits d'épicerie qui permet aux u
 Cette application regroupe quatre Interface:
 
 - La page de connection ✅
+- 
   <img width="861" alt="OALET" src="https://github.com/tizibienvenus/groceryapp/blob/main/signinscreen.png"/>
+
+
 - La page d'acceuil ✅
+
 - La page des Categories ✅
+
 - La page des details des Produit ✅
+
   <img width="861" alt="OALET" src="https://github.com/tizibienvenus/groceryapp/blob/main/detailscreen.png"/>
 - La page du pannier ✅
 - La page des favoris ✅
