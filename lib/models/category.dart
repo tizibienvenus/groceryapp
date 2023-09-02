@@ -1,3 +1,5 @@
+import 'package:groceryapp/generated/assets.dart';
+
 class Category {
   final String title, image;
 
@@ -6,17 +8,61 @@ class Category {
 
 // list of products
 // for our demo
-List<Category> products = [
+List<Category> categorys = [
   Category(
-    title: "Classic Leather Arm Chair",
-    image: "assets/images/Item_1.png",
+    title: "Egg",
+    image: Assets.iconsType1,
   ),
   Category(
-   title: "Poppy Plastic Tub Chair",
-    image: "assets/images/Item_2.png",
+    title: "Rice",
+    image: Assets.iconsType2,
   ),
   Category(
-    title: "Bar Stool Chair",
-    image: "assets/images/Item_3.png",
+    title: "Vegetables",
+    image: Assets.iconsType3,
+  ),
+  Category(
+    title: "Mushroom",
+    image: Assets.iconsType4,
+  ),
+  Category(
+    title: "Dairy",
+    image: Assets.iconsType5,
+  ),
+  Category(
+    title: "Fruits",
+    image: Assets.iconsType6,
+  ),
+  Category(
+      title: "Bread",
+      image: Assets.iconsType7,
+  ),
+  Category(
+    title: "Egg",
+    image: Assets.iconsType1,
+  ),
+  Category(
+    title: "Rice",
+    image: Assets.iconsType2,
+  ),
+  Category(
+    title: "Vegetables",
+    image: Assets.iconsType3,
+  ),
+  Category(
+    title: "Mushroom",
+    image: Assets.iconsType4,
+  ),
+  Category(
+    title: "Dairy",
+    image: Assets.iconsType5,
+  ),
+  Category(
+    title: "Fruits",
+    image: Assets.iconsType6,
+  ),
+  Category(
+      title: "Bread",
+      image: Assets.iconsType7,
   ),
 ];

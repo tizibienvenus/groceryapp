@@ -25,7 +25,7 @@ class MyApp extends StatelessWidget {
         hintColor: kBackgroundColor,
         visualDensity: VisualDensity.adaptivePlatformDensity,
       ),
-      home: Home(),
+      home: SignInScreen(),
     );
   }
 }

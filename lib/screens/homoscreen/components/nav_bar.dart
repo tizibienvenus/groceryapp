@@ -5,7 +5,7 @@ import 'package:groceryapp/screens/homoscreen/homescreen.dart';
 import 'package:groceryapp/screens/profile/profile_screen.dart';
 
 import '../../cart/cartsreen.dart';
-import '../../favorites/favoris.dart';
+import '../../favorites/favorites.dart';
 
 class Home extends StatefulWidget{
   const Home({Key? key}): super(key: key);
@@ -25,7 +25,7 @@ class _ButtomNavbarState extends State<Home>{
 
   ];
 
-  int CurrentIndex = 2;
+  int CurrentIndex = 0;
   void onTape(int index){
     setState(() {
       CurrentIndex = index;
@@ -53,20 +53,23 @@ class _ButtomNavbarState extends State<Home>{
         elevation: 10,
         //style: BottomNavigationBar: NavBarStyle.style15,
         items: [
-          const BottomNavigationBarItem(icon: Icon(
+           const BottomNavigationBarItem(icon: Icon(
             Icons.home,
             //size: 30,
             //size: CurrentIndex. ? 30:40,
           ),
               label: 'Orders'
           ),
-          const BottomNavigationBarItem(
-            icon: Icon(
-                Icons.import_export_outlined,
-              ),
+          BottomNavigationBarItem(
+              icon: Transform.rotate(
+                  angle: 1.5,
+                  child: const Icon(
+                  Icons.import_export_outlined,
+                ),
             //size: 25,
-              label: 'Category'
           ),
+              label: 'Category'
+    ),
           BottomNavigationBarItem(
          icon:Stack(
                 children:[

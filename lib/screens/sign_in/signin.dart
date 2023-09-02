@@ -4,6 +4,7 @@ import 'package:google_fonts/google_fonts.dart';
 import 'package:groceryapp/constants.dart';
 import 'package:groceryapp/generated/assets.dart';
 import 'package:groceryapp/screens/details/details_product.dart';
+import 'package:groceryapp/screens/homoscreen/components/nav_bar.dart';
 
 import '../../components/textfield.dart';
 
@@ -14,7 +15,7 @@ class SignInScreen extends StatelessWidget {
       //left: false,
       //right: false,
         body: SafeArea(
-          bottom: false,
+          //bottom: false,
           top: false,
           child: Container(
             height: MediaQuery.of(context).size.height,
@@ -61,7 +62,7 @@ class SignInScreen extends StatelessWidget {
                                   Navigator.push(
                                       context,
                                       MaterialPageRoute(
-                                      builder: (context) => DetailsProductsScreen()
+                                      builder: (context) => const Home()
                                   ),
                                   );
                                 },
@@ -97,21 +98,6 @@ class SignInScreen extends StatelessWidget {
        // ),
 
       //), child: null,
-    );
-  }
-
-  AppBar buildAppBar() {
-    return AppBar(
-      backgroundColor: kPrimaryColor,
-      elevation: 0,
-      centerTitle: false,
-      title: Text('Dashboard'),
-      actions: <Widget>[
-        IconButton(
-          icon: SvgPicture.asset("assets/icons/notification.svg"),
-          onPressed: () {},
-        ),
-      ],
     );
   }
 }

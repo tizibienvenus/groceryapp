@@ -1,7 +1,8 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_svg/svg.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:groceryapp/constants.dart';
+import 'package:groceryapp/screens/category/components/category_card.dart';
+import '../../models/category.dart';
 
 class CategoryScreen extends StatelessWidget {
   @override
@@ -9,19 +10,32 @@ class CategoryScreen extends StatelessWidget {
     return Scaffold(
       //left: false,
       //right: false,
+      appBar: buildAppBar(),
       body: SafeArea(
-        bottom: false,
-        //top: false,
-        child: Container(
-          child: Center(
-            child: Text(
-                "Category Page",
-                style: GoogleFonts.nunito(
-                  fontSize: 35,
-                  fontWeight: FontWeight.bold,
-                  color: Colors.black.withOpacity(0.85),
+        //bottom: true,
+        //top: true,
+        child: SingleChildScrollView(
+          scrollDirection: Axis.vertical,
+          child: Container(
+            padding: const EdgeInsets.symmetric(horizontal: 33, vertical: 30),
+            child: Column(
+              children: [
+                Wrap(
+                  alignment: WrapAlignment.center,
+                  runAlignment: WrapAlignment.center,
+                  direction: Axis.horizontal,
+                  spacing: 25,
+                  runSpacing: 25,
+                  children: List.generate(
+                    categorys.length,
+                        (index) => CategoryCard(
+                      category: categorys[index],
+                    ),
+                  ),
                 )
+              ],
             ),
+
           ),
         ),
       ),
@@ -33,16 +47,23 @@ class CategoryScreen extends StatelessWidget {
 
   AppBar buildAppBar() {
     return AppBar(
-      backgroundColor: kPrimaryColor,
+      backgroundColor: kMainColor,
       elevation: 0,
       centerTitle: false,
-      title: Text('Favorite\'s'),
-      actions: <Widget>[
+      title: Text(
+          'Categories',
+          style: GoogleFonts.nunito(
+            fontSize: 23,
+            fontWeight: FontWeight.bold,
+            color: Colors.white.withOpacity(0.85),
+          )
+      ),
+      /*actions: <Widget>[
         IconButton(
           icon: SvgPicture.asset("assets/icons/notification.svg"),
           onPressed: () {},
         ),
-      ],
+      ],*/
     );
   }
 }

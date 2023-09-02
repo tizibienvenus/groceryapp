@@ -1,11 +1,16 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:groceryapp/constants.dart';
-import 'package:groceryapp/generated/assets.dart';
-
-import '../../components/textfield.dart';
+import 'package:groceryapp/models/products.dart';
 
 class DetailsProductsScreen extends StatelessWidget {
+
+  DetailsProductsScreen({
+    Key? key,
+    required this.product,
+  }) : super(key: key);
+
+  final Product product;
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -22,9 +27,23 @@ class DetailsProductsScreen extends StatelessWidget {
           child: Stack(
             //alignment: AlignmentDirectional.topEnd,
             children: [
-              Image.asset(Assets.imagesOrange),
+              Image.asset(
+                fit: BoxFit.cover,
+                product.image,
+                width: MediaQuery.of(context).size.width,
+                //height: MediaQuery.of(context).size.width * 0.5,
+              ),
               Positioned(
-                top: 320,
+                top: 50,
+                  child: IconButton(
+                    onPressed: () {
+                      Navigator.pop(context);
+                    },
+                    icon: Icon(Icons.arrow_back),
+                  ),
+              ),
+              Positioned(
+                bottom: 100,
                 child: Container(
                   width: MediaQuery
                       .of(context)
@@ -50,7 +69,7 @@ class DetailsProductsScreen extends StatelessWidget {
 
                             // Titre du fruit
                             Text(
-                                "Fresh Orange",
+                                product.title,
                                 style: GoogleFonts.nunito(
                                   fontSize: 28,
                                   fontWeight: FontWeight.bold,
@@ -88,7 +107,7 @@ class DetailsProductsScreen extends StatelessWidget {
 
                             // prix du fruit
                             Text(
-                              "\$4.9",
+                              "\$${product.price}",
                               style: GoogleFonts.nunito(
                                   fontWeight: FontWeight.bold,
                                   fontSize: 30,
@@ -166,21 +185,18 @@ class DetailsProductsScreen extends StatelessWidget {
                           ],
                         ),
                         const SizedBox(height: 3,),
-                        Row(
-                          mainAxisAlignment: MainAxisAlignment.start,
-                          children: [
-                            Stack(
+                        Stack(
                               alignment: AlignmentDirectional.topStart,
                                 children: [
                                   Container(
-                                      width: 335,
-                                      height: 1,
+                                      width: MediaQuery.of(context).size.width,
+                                      height: 2,
                                       decoration: const BoxDecoration(
                                           color: Color(0xffd9d9d9))
                                   ),
                                   Positioned(
-                                    //left: 0,
-                                    //top: 0,
+                                    left: 0,
+                                    top: 0,
                                       child: Container(
                                           width: 130,
                                           height: 3,
@@ -189,13 +205,13 @@ class DetailsProductsScreen extends StatelessWidget {
                                       )
                                   )
                                 ],
-                            )
-                          ],
-                        ),
+                            ),
+
                         const SizedBox(height: 30),
-                        const Text(
-                          "Lorem Ipsum dolor sit amet, consectetur adipiscing elt, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.Eiusmod tempor incididunt ut labore et dolore magna aliqua, Ut enim ad minim veniam",
-                        style: TextStyle(
+                        Text(
+                          product.description,
+                          //"Lorem Ipsum dolor sit amet, consectetur adipiscing elt, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.Eiusmod tempor incididunt ut labore et dolore magna aliqua, Ut enim ad minim veniam",
+                        style: const TextStyle(
                         fontSize: 18,
                           fontWeight: FontWeight.w400,
                         )

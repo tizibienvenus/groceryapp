@@ -7,6 +7,7 @@ class CartScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      appBar: buildAppBar(),
       //left: false,
       //right: false,
       body: SafeArea(
@@ -33,16 +34,24 @@ class CartScreen extends StatelessWidget {
 
   AppBar buildAppBar() {
     return AppBar(
-      backgroundColor: kPrimaryColor,
       elevation: 0,
-      centerTitle: false,
-      title: Text('Favorite\'s'),
-      actions: <Widget>[
-        IconButton(
-          icon: SvgPicture.asset("assets/icons/notification.svg"),
-          onPressed: () {},
+      toolbarHeight: 65,
+      toolbarOpacity: 0,
+      shadowColor: kPrimaryColor,
+      leadingWidth: 0,
+      backgroundColor: kMainColor,
+      title: Container(
+        child: Center(
+            child: Text(
+                "Cart List",
+                style: GoogleFonts.nunito(
+                  fontSize: 23,
+                  fontWeight: FontWeight.bold,
+                  color: Colors.white.withOpacity(0.85),
+                )
+            )
         ),
-      ],
+      ),
     );
   }
 }
