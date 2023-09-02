@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:groceryapp/constants.dart';
+import 'package:groceryapp/models/class_products.dart';
 
 class HomeScreen extends StatelessWidget {
   @override
@@ -15,19 +16,36 @@ class HomeScreen extends StatelessWidget {
         //top: false,
         child: Container(
           padding: EdgeInsets.symmetric(horizontal: 20, vertical: 30),
-          child: Row(
-            mainAxisAlignment: MainAxisAlignment.spaceBetween,
+          child: Column(
             children: [
-              Text(
-                "Catégories",
-                  style: GoogleFonts.nunito(
-                    fontSize: 25,
-                    fontWeight: FontWeight.bold,
-                    color: Colors.black.withOpacity(0.85),
+              Row(
+                mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                children: [
+                  Text(
+                    "Catégories",
+                      style: GoogleFonts.nunito(
+                        fontSize: 25,
+                        fontWeight: FontWeight.bold,
+                        color: Colors.black.withOpacity(0.85),
+                      )
+                  ),
+                  IconButton(
+                      onPressed: (){},
+                      icon: Icon(Icons.arrow_forward_outlined)
                   )
+                ],
+              ),
+               Row(
+                children: [
+                  ListView.builder(
+                    itemCount: typesproducts.length,
+                      itemBuilder: (context, index) => ProdutsTypes()
+                  ),
+                ],
               )
             ],
           ),
+          
         ),
       ),
       // ),
