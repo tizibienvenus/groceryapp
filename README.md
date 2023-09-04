@@ -10,15 +10,21 @@ Cette application regroupe quatre Interface:
 
 - La page d'acceuil ✅
 
+<img width="861" alt="OALET" src="https://github.com/tizibienvenus/groceryapp/blob/main/home.png"/>
+
 - La page des Categories ✅
+
+<img width="861" alt="OALET" src="https://github.com/tizibienvenus/groceryapp/blob/main/category.png"/>
 
 - La page des details des Produit ✅
   
-<img width="861" alt="OALET" src="https://github.com/tizibienvenus/groceryapp/blob/main/detailscreen.png"/>
+<img width="861" alt="OALET" src="https://github.com/tizibienvenus/groceryapp/blob/main/details.png"/>
 
 - La page du pannier ✅
 
 - La page des favoris ✅
+
+<img width="861" alt="OALET" src="https://github.com/tizibienvenus/groceryapp/blob/main/favorites.png"/>
 
 ### Design UI/UX de l'application
 
